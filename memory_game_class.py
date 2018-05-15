@@ -1,4 +1,5 @@
-# the imports
+__author__ = "Petar Netev"
+
 import pygame
 import random
 from itertools import product
