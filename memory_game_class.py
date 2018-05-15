@@ -6,7 +6,7 @@ from pygame.locals import *
 from pygame.color import Color
 
 
-class MemoryGame(object):
+class MemoryGame:
 
     # the constants
     FPS = 30
@@ -264,12 +264,12 @@ class MemoryGame(object):
 
 
 if __name__ == '__main__':
-    metric_x = input("Enter a number for boxes to have horizontal.")
-    metric_y = input("Enter a number for boxes to have vertically.")
+    metric_x = input("Enter a number for boxes to have horizontal: ")
+    metric_y = input("Enter a number for boxes to have vertically: ")
 
     while not (int(metric_x)*int(metric_y))%2 == 0:
-        metric_x = input("Enter a number for boxes to have horizontal.")
-        metric_y = input("Enter a number for boxes to have vertically.")
+        metric_x = input("Enter a number for boxes to have horizontal: ")
+        metric_y = input("Enter a number for boxes to have vertically: ")
 
     game = MemoryGame(int(metric_x),int(metric_y))
     game.main()
