@@ -158,8 +158,8 @@ class MemoryGame:
         pygame.display.update()
         pygame.time.wait(250)
 
-        for sz in range(0, self.board_height * self.board_width, 5):
-            l = coordinates[sz: sz + 5]
+        for sx in range(0, self.board_height * self.board_width, 5):
+            l = coordinates[sx: sx + 5]
             for x in l:
                 revealed[x[0]][x[1]] = True
                 self.draw_square(board, revealed, *x)
@@ -172,7 +172,7 @@ class MemoryGame:
         # This function draws the actual bord with icon_formss which stays beneath the mask squares.
 
         icons = list(product(icon_forms, colors))
-        num_icons = self.board_height * self.board_width // 2
+        num_icons = (self.board_height*self.board_width)//2
         icons = icons[:num_icons] * 2
 
         random.shuffle(icons)
