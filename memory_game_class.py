@@ -158,12 +158,12 @@ class MemoryGame:
         pygame.time.wait(250)
 
         for sx in range(0, self.board_height * self.board_width, 5):
-            l = coordinates[sx: sx + 5]
-            for x in l:
+            square_coords = coordinates[sx: sx + 5]
+            for x in square_coords:
                 revealed[x[0]][x[1]] = True
                 self.draw_square(board, revealed, *x)
             pygame.time.wait(250)
-            for x in l:
+            for x in square_coords:
                 revealed[x[0]][x[1]] = False
                 self.draw_square(board, revealed, *x)
 
