@@ -15,8 +15,7 @@ class MemoryGame:
     SCREEN_HEIGHT = 800
     SQUARE_GAP = 10
 
-
-    # the icon_formss
+    # the icon_forms
     DIAMOND = 'diamond'
     SQUARE = 'square'
     TRIANGLE = 'triangle'
